@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <title>Mistä tämä tulee?</title>
+  <link rel="stylesheet" href="tyyli.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Etusivu</a>
+    <a href="komennot.html">Komennot</a>
+    <a href="tietoa.html">Mistä tämä tulee?</a>
+  </nav>
+
+  <h1>Mistä tämä tulee?</h1>
+  <ol>
+    <li>Selain pyytää osoitetta <code>localhost:8080</code>.</li>
+    <li>Docker ohjaa hostin portin 8080 kontin porttiin 80.</li>
+    <li>Nginx lukee tiedoston kansiosta <code>/usr/share/nginx/html</code>.</li>
+    <li>Bind mountin ansiosta se kansio on oikeasti hostin <code>sivusto</code>-kansio.</li>
+  </ol>
+  <p><a href="index.html">Takaisin etusivulle</a></p>
+</body>
+</html>

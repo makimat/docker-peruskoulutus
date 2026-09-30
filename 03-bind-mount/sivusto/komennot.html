@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <title>Komennot</title>
+  <link rel="stylesheet" href="tyyli.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Etusivu</a>
+    <a href="komennot.html">Komennot</a>
+    <a href="tietoa.html">Mistä tämä tulee?</a>
+  </nav>
+
+  <h1>Peruskomennot</h1>
+  <table>
+    <tr><td><code>docker run</code></td><td>Käynnistä kontti imagesta</td></tr>
+    <tr><td><code>docker ps</code></td><td>Käynnissä olevat kontit</td></tr>
+    <tr><td><code>docker ps -a</code></td><td>Myös pysäytetyt kontit</td></tr>
+    <tr><td><code>docker logs</code></td><td>Kontin stdout ja stderr</td></tr>
+    <tr><td><code>docker exec -it</code></td><td>Komento käynnissä olevaan konttiin</td></tr>
+    <tr><td><code>docker stop</code></td><td>Pysäytä kontti</td></tr>
+    <tr><td><code>docker rm</code></td><td>Poista kontti</td></tr>
+    <tr><td><code>docker images</code></td><td>Koneella olevat imaget</td></tr>
+    <tr><td><code>docker build</code></td><td>Rakenna image Dockerfilestä</td></tr>
+  </table>
+</body>
+</html>

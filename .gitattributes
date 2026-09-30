@@ -1,0 +1,2 @@
+# Kaikki tekstitiedostot LF-rivinvaihdoilla, jotta ne toimivat Linux-konteissa
+* text=auto eol=lf
