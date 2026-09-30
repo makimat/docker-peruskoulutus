@@ -5,16 +5,12 @@ Harjoitukset Dockerin peruskoulutukseen. Jokaisessa kansiossa on oma README, jos
 ## Ennen koulutusta
 
 1. Asenna [Docker Desktop](https://www.docker.com/products/docker-desktop/) WSL2-taustalla ja käynnistä se.
-2. Aseta Git käyttämään Linux-rivinvaihtoja:
-   ```powershell
-   git config --global core.autocrlf input
-   ```
-3. Kloonaa tämä repo:
+2. Kloonaa tämä repo:
    ```powershell
    git clone https://github.com/makimat/docker-peruskoulutus.git
    cd docker-peruskoulutus
    ```
-4. Varmista, että Docker toimii:
+3. Varmista, että Docker toimii:
    ```powershell
    docker run hello-world
    ```

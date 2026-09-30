@@ -13,5 +13,9 @@ Kokeile promptia tyhjässä kansiossa, jossa on vain `04-dockerfile`-kansion `ma
 1. **Ei root-käyttäjää.** Dockerfilessä on `USER`-rivi. Kubernetes-klusterit voivat estää root-kontit.
 2. **.dockerignore on olemassa.** Siinä on ainakin `.git`, `.venv`, `__pycache__`, `*.pyc` ja `.env`. Muuten salaisuudet ja turhat tiedostot päätyvät imageen.
 3. **Lokit stdoutiin.** Sovellus ei kirjoita lokeja tiedostoon kontin sisällä. Muuten `docker logs` ja Kubernetes eivät näe niitä.
-4. **Rivinvaihdot LF.** Windowsilla tallennettu skripti CRLF-rivinvaihdoilla kaatuu kontissa virheeseen `/bin/sh^M: bad interpreter`. Tarkista rivinvaihdot editorin alapalkista.
+4. **Rivinvaihdot LF.** Windowsilla tallennettu skripti CRLF-rivinvaihdoilla kaatuu kontissa virheeseen `/bin/sh^M: bad interpreter`. Tarkista rivinvaihdot editorin alapalkista. Pysyvämpi ratkaisu on repon `.gitattributes`, joka pakottaa konttiin menevät tiedostot LF:ksi:
+   ```
+   Dockerfile text eol=lf
+   *.sh       text eol=lf
+   ```
 5. **Base image on pieni ja versioitu.** Esimerkiksi `python:3.11-slim`, ei `python:latest`.
